@@ -108,7 +108,7 @@ bleuart_advertise(void)
     adv_params.disc_mode = BLE_GAP_DISC_MODE_GEN;
     rc = ble_gap_adv_start(BLE_OWN_ADDR_PUBLIC, NULL, BLE_HS_FOREVER,
                            &adv_params, bleuart_gap_event, NULL);
-    console_printf("WTF %d\n",rc);
+    console_printf("Advertise rc: %d\n",rc);
     if (rc != 0) {
         return;
     }
